@@ -1,0 +1,72 @@
+.custom-orange-bg {
+    background-color: #3d4d6f;
+}
+
+
+/* CSS kodunu burada yerleştirin (stil özelleştirmelerinizi yapabilirsiniz). */
+
+/* Örnek: Modal ve düğme stilleri */
+.modal {
+    display: none;
+    /* Modal stilini özelleştirin */
+}
+
+.modal #modalImg {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close {
+    font-size: 16px; /* Yazı tipi boyutu */
+    color: #888; /* Metin rengi */
+    float: right; /* Sağa yasla */
+    cursor: pointer; /* İşaretçi türü değiştir */
+}
+
+.slideshow-button {
+    background-color: #555; 
+}
+
+
+.col-sm-4 {
+    transition: transform 0.3s ease;
+}
+
+.col-sm-4:hover {
+    transform: scale(1.05); /* Kartın boyutunu büyütür */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Gölge efekti ekler */
+}
+
+.card {
+    width: 18rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+.card:hover {
+transform: scale(0.95);
+transition: transform 0.3s ease;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+cursor: pointer; /* Fare işaretçisini bir el işareti olarak göster */
+}
+
+.card-body {
+flex-grow: 1;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.navbar-fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+/* styles.css dosyanıza ekleyin */

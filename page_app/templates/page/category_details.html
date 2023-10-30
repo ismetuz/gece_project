@@ -1,0 +1,26 @@
+{% extends 'core/base.html'  %}
+
+{% block title %} {{ category.title }} {% endblock %}
+
+{% block content %}
+
+<h1 class="text-center mt-3">{{ category.description }}</h1>
+<div class="container">
+    <div class="row">
+        {% for product in product_objects %}
+            {% for categorys in product.category.all %}
+                {% if categorys.title == category.title %}
+                    <div class="col-sm-4 mt-3">
+                        <a href="{{ product.image.url }}" data-lightbox="image-gallery" data-title="{{ product.title }}">
+                            <div class="img-container" style="width: 400px; height: 400px; overflow: hidden;">
+                                <img src="{{ product.image.url }}" alt="{{ product.title }}" style="object-fit: cover; width: 100%; height: 100%;">
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

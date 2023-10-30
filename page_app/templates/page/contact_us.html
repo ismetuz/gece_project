@@ -1,0 +1,114 @@
+{% extends 'core/base.html'  %}
+
+{% block title %} İletişim {% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+  <div class="row mt-5 justify-content-center">
+    <div class="col-sm-4 mt-5 ">
+      <h3>Adres</h3>
+      <p>
+        İş Yerimiz: {{ contact_objects.0.adress}}
+      </p>
+    </div>
+    <div class="col-sm-4 mt-5">
+      <h3>İletişim Bilgilerimiz</h3>
+      <table>
+        <tr>
+          <td>Telefon No</td>
+          <td style="width: 30px;"></td>
+          <td>:{{ contact_objects.0.contact_number}} </td>
+        </tr>
+        <tr>
+          <td>e-mail</td>
+          <td style="width: 30px;"></td>
+          <td>:{{ contact_objects.0.contact_email}} </td>
+        </tr>
+        <tr>
+          <td>Whatsapp Sipariş</td>
+          <td style="width: 30px;"></td>
+          <td>:{{ contact_objects.0.contact_number}} </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-sm-4 mt-5">
+      <h3>Çalışma Saatlerimiz</h3>
+      <p>
+        <table>
+          <tr>
+            <td>Pazartesi</td>
+            <td style="width: 50px;"></td>
+            <td>:09.00-18.00</td>
+          </tr>
+          <tr>
+            <td>Salı</td>
+            <td style="width: 50px;"></td>
+            <td>:09.00-18.00</td>
+          </tr>
+          <tr>
+            <td>Çarşamba</td>
+            <td style="width: 50px;"></td>
+            <td>:09.00-18.00</td>
+          </tr>
+          <tr>
+            <td>Perşembe</td>
+            <td style="width: 50px;"></td>
+            <td>:09.00-18.00</td>
+          </tr>
+          <tr>
+            <td>Cuma</td>
+            <td style="width: 50px;"></td>
+            <td>:09.00-18.00</td>
+          </tr>
+          <tr>
+            <td>Cumartesi</td>
+            <td style="width: 50px;"></td>
+            <td>:09.00-18.00</td>
+          </tr>
+          <tr>
+            <td>Pazar</td>
+            <td style="width: 50px;"></td>
+            <td>:Kapalı</td>
+          </tr>
+          <tr>
+            <td><br></td>
+          </tr>
+          <tr>
+            <td><br></td>
+          </tr>
+          <tr>
+            <td><br></td>  
+          </tr>
+          <tr>
+            <td><br></td>  
+          </tr>
+          <tr>
+            <td><br></td>  
+          </tr>
+          <tr>
+            <td><br></td>  
+          </tr>
+          <tr>
+            <td><br></td>  
+          </tr>
+          <tr>
+            <td><br></td>  
+          </tr>
+        </table>
+        
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
+
+<strong>{{ contact_objects.0.title }}</strong><br>
+
+Firma Numarası: {{ contact_objects.0.contact_number}} <br>
+E-posta: {{ contact_objects.0.contact_email }}<br>
+İban Bilgisi :  {{ contact_objects.0.iban }}

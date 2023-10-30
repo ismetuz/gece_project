@@ -1,4 +1,16 @@
-<!DOCTYPE html>
-<H1>
-    GECE PROJESİ
-</H1>
+{% extends 'core/base.html'  %}
+
+{% block title %} Anasayfa {% endblock %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <div class="row">
+        {% include 'core/carousel.html'  %}
+    </div>
+    <div class="row">
+        {% include 'core/categories.html'  %}
+    </div>
+</div>
+
+{% endblock %}
