@@ -1,7 +1,7 @@
 {% load static %}
-  <nav class="navbar navbar-expand-lg navbar-dark rounded p-3 mt-2 custom-orange-bg">
+  <nav class="navbar navbar-expand-lg navbar-dark rounded p-3 mt-2 custom-navbar-bg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">Gece Wallpaper</a>
+      <a class="navbar-brand" href="/">{{ contact_objects.0.title }}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,9 +22,6 @@
             </ul>
           </li>
         </ul>
-        <form role="search">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        </form>
       </div>
     </div>
   </nav>
