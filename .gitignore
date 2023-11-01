@@ -1,0 +1,14 @@
+# Python Venom dosyaları
+__pycache__/
+*.pyc
+
+# Virtual environment (örneğin, VenENV veya .env)
+venv/
+.env
+gece_venv/
+
+# Django tarafından oluşturulan veritabanı dosyaları
+db.sqlite3
+
+# Django tarafından oluşturulan migrations (veritabanı migrasyonları)
+/migrations/
