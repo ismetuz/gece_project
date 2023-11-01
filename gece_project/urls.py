@@ -29,4 +29,4 @@ urlpatterns = [
     path('<slug:category_slug>',category_view, name='category_view'),
     path('about_us/',about_us, name='about_us'),
     path('contact_us/',contact_us, name='contact_us'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

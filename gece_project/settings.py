@@ -140,7 +140,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static_files",
 ]
 
-STATİC_ROOT = "/var/www/example.com/static/"
+STATİC_ROOT = "/var/www/gecewallpaper.pythonanywhere.com/static/"
 
 
 MEDIA_URL = 'media_files/'
