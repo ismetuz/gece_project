@@ -1,24 +1,33 @@
-{% for categories in category_objects %} 
-<style> .card {  
-  width: 18rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-  </style>
-<div class="col-sm-3" >
-  <div class="card mt-3" onclick="window.location='{{categories.slug}}';">
-    <img src="{{ categories.photo.url }}" class="card-img-top" alt="{{ categories.title }}" width="300" height="200">
-    <div class="card-body">
-      <h5 class="card-title">
-        {{ categories.title|truncatechars:26 }}
-      </h5>
-      <p class="card-text">
-        {{ categories.description|truncatechars:100 }}
-      </p>
-    </div>
+<style>
+  .card {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+  .card-link {
+      text-decoration: none; /* Altı çiziliyi kaldır */
+  }
+  .card-title, .card-text {
+      text-decoration: none; /* Başlık ve açıklama altını çiziliyi kaldır */
+  }
+</style>
+
+<div class="row">
+{% for categories in category_objects %}
+  <div class="col-6 col-sm-3 mt-3">
+    <a href="{{ categories.slug }}" class="card-link">
+      <div class="card">
+        <img src="{{ categories.photo.url }}" class="card-img-top" alt="{{ categories.title }}" width="300" height="200">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ categories.title|truncatechars:26 }}
+          </h5>
+          <p class="card-text">
+            {{ categories.description|truncatechars:100 }}
+          </p>
+        </div>
+      </div>
+    </a>
   </div>
+{% endfor %}
 </div>
-
-
-{% endfor %} 

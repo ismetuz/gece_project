@@ -2,7 +2,7 @@
   <div class="carousel-inner">
     {% for slider in slideritem_objects %}
     <div class="carousel-item {% if slider.image.url is not None %} active {% endif %}">
-      <img src="{{ slider.image.url }}" class="d-block w-100" width='1920' height='400' alt="{{ slider.title }}">
+      <img src="{{ slider.image.url }}" class="d-block w-100" alt="{{ slider.title }}" style="max-width: 100%; height: auto;">
     </div>
     {% endfor %}
   </div>

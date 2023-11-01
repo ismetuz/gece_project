@@ -51,10 +51,11 @@ MY_APPS = [
 
 ]
 THIRD_PARTY_APPS = [
+    'import_export',
 
 ]
 
-INSTALLED_APPS = BASE_APPS + THIRD_PARTY_APPS + MY_APPS
+INSTALLED_APPS = BASE_APPS + MY_APPS + THIRD_PARTY_APPS 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

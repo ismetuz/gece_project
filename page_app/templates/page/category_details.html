@@ -6,7 +6,7 @@
 
 <h1 class="text-center mt-3">{{ category.description }}</h1>
 <div class="container">
-    <div class="row">
+    <div class="row mt-3">
         {% for product in product_objects %}
             {% for categorys in product.category.all %}
                 {% if categorys.title == category.title %}

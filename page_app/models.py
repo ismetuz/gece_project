@@ -5,6 +5,7 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
 
+
 def convert_to_slug(text):
     return unidecode(text)
 
@@ -70,5 +71,4 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-
     
