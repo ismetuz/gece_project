@@ -13,8 +13,28 @@
 <body >
     {% include 'core/navbar.html' %}
 
+    {% for mainadvert in mainadvert_objects %}
+    <div class="container mt-3">
+      <img src="{{ mainadvert.image.url }}" class="d-block w-100" alt="" style="max-width: 100%; height: 150px;">
+    </div>
+    {% endfor %}
+
     {% block content %}
     {% endblock %}
+    
+    <style>
+      .custom-whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+      }
+    </style>
+    
+    <a href="https://api.whatsapp.com/send?phone={{ contact_objects.0.contact_number }}" target="_blank" class="btn custom-whatsapp-button">
+      <img src="{% static 'media/whatsappicon.png' %}" alt="WhatsApp" style="width: 60px; height: 60px;">
+    </a>
+  
 
     {% include 'core/footer.html' %}
 

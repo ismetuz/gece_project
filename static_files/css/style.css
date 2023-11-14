@@ -73,4 +73,16 @@ justify-content: space-between;
     width: 100%;
   }
 
+.custom-whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+.custom-whatsapp-button img {
+    width: 30px;
+    height: 30px;
+  }
+
 /* styles.css dosyanıza ekleyin */

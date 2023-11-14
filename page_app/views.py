@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Category,Products, SliderItem , ContactInfo
+from .models import Category,Products, SliderItem , ContactInfo, MainAdvert
 
 
 # Create your views here.
@@ -10,11 +10,13 @@ def home_view(request):
     category_objects = Category.objects.all()
     slideritem_objects = SliderItem.objects.all()
     contact_objects = ContactInfo.objects.all()
+    mainadvert_objects = MainAdvert.objects.all()
     context=dict(
         category_objects = category_objects,
         slideritem_objects = slideritem_objects,
         product_objects = product_objects,
         contact_objects=contact_objects,
+        mainadvert_objects = mainadvert_objects,
     )
     return render(request,'page/home_page.html', context)
 

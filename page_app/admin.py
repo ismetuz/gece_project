@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Products, SliderItem, ContactInfo
+from .models import Category, Products, SliderItem, ContactInfo, MainAdvert
 from import_export import resources, fields
 from import_export.admin import ImportExportModelAdmin
 from .resource import ProductResource, CategoryResource
@@ -18,3 +18,7 @@ class ProductAdmin(ImportExportModelAdmin):
 @admin.register(Category)
 class CategoryAdmin(ImportExportModelAdmin):
     resource_class = CategoryResource
+
+@admin.register(MainAdvert)
+class MainAdvertAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description','image')

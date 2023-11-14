@@ -146,7 +146,7 @@ STATİC_ROOT = "/var/www/gecewallpaper.pythonanywhere.com/static/"
 
 MEDIA_URL = 'media_files/'
 
-MEDIA_ROOT = BASE_DIR /'media_files'
+MEDIA_ROOT = BASE_DIR /'static_files/media'
 
 
 
